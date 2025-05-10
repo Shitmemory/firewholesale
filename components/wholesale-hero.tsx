@@ -41,9 +41,9 @@ export default function WholesaleHero() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-black px-8 py-6 text-lg rounded-md"
             >
-              <Link href="/download">
+              <Link href="/register">
                 <Download className="mr-2 h-5 w-5" />
-                Download App
+                Register Now
               </Link>
             </Button>
           </div>

@@ -1,10 +1,18 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ShoppingCart, Filter, ChevronDown } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { ShoppingCart, Filter, ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 export default function ProductsPage() {
-  const categories = ["All Products", "Platters", "Curry Bases", "Vegetarian", "Sauces", "Sides", "Desserts"]
+  const categories = [
+    "All Products",
+    "Platters",
+    "Curry Bases",
+    "Vegetarian",
+    "Sauces",
+    "Sides",
+    "Desserts",
+  ];
 
   const products = [
     {
@@ -14,7 +22,7 @@ export default function ProductsPage() {
       description:
         "Bulk pack of our signature Fire Platter ingredients. Includes Desi Lamb Doner, Bhangra Sauce, and more.",
       price: 120.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 2,
@@ -23,39 +31,43 @@ export default function ProductsPage() {
       description:
         "Bulk pack with Boneless Fried Chicken, Fries, and our special sauce. Perfect for restaurants and takeaways.",
       price: 110.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 3,
       name: "Premium Curry Base",
       category: "Curry Bases",
-      description: "Our signature curry base in bulk quantities. Create authentic curried lamb and other dishes.",
+      description:
+        "Our signature curry base in bulk quantities. Create authentic curried lamb and other dishes.",
       price: 85.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 4,
       name: "Paneer Tikka Wholesale Kit",
       category: "Vegetarian",
-      description: "Everything needed to create our popular vegetarian Paneer Tikka dishes in bulk quantities.",
+      description:
+        "Everything needed to create our popular vegetarian Paneer Tikka dishes in bulk quantities.",
       price: 90.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 5,
       name: "Bhangra Sauce - 5L",
       category: "Sauces",
-      description: "Our signature Bhangra sauce in a 5-liter container. Perfect for restaurants and food service.",
+      description:
+        "Our signature Bhangra sauce in a 5-liter container. Perfect for restaurants and food service.",
       price: 45.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 6,
       name: "Butter Chicken Base - 5kg",
       category: "Curry Bases",
-      description: "Premium butter chicken base in bulk quantity. Just add chicken and cream for an authentic dish.",
+      description:
+        "Premium butter chicken base in bulk quantity. Just add chicken and cream for an authentic dish.",
       price: 65.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 7,
@@ -64,27 +76,31 @@ export default function ProductsPage() {
       description:
         "Bulk ingredients for our popular vegetarian platter. Includes Indian Paneer, Vegan Kofta, and more.",
       price: 95.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
     {
       id: 8,
       name: "Garlic Naan Bread - 50 Pack",
       category: "Sides",
-      description: "Ready-to-cook garlic naan bread in a bulk pack of 50. Perfect accompaniment for curry dishes.",
+      description:
+        "Ready-to-cook garlic naan bread in a bulk pack of 50. Perfect accompaniment for curry dishes.",
       price: 40.0,
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/placeholder.jpg",
     },
-  ]
+  ];
 
   return (
     <main className="min-h-screen bg-black text-white py-12 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto">
         {/* Page Header */}
         <div className="mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">Wholesale Products</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            Wholesale Products
+          </h1>
           <p className="text-gray-400 max-w-3xl">
-            Browse our complete range of wholesale products.oducts. All items are available for delivery or collection.
-            Minimum order values apply.
+            Browse our complete range of wholesale products.oducts. All items
+            are available for delivery or collection. Minimum order values
+            apply.
           </p>
         </div>
 
@@ -95,7 +111,11 @@ export default function ProductsPage() {
             <div className="bg-[#1A1A1A] rounded-lg p-6 sticky top-24">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-xl font-bold">Filters</h3>
-                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-gray-400 hover:text-white"
+                >
                   <Filter className="h-4 w-4 mr-2" />
                   Reset
                 </Button>
@@ -108,7 +128,11 @@ export default function ProductsPage() {
                   {categories.map((category, index) => (
                     <li key={index}>
                       <button
-                        className={`text-left w-full py-1 ${index === 0 ? "text-[#FF6B35]" : "text-gray-400 hover:text-white"}`}
+                        className={`text-left w-full py-1 ${
+                          index === 0
+                            ? "text-[#FF6B35]"
+                            : "text-gray-400 hover:text-white"
+                        }`}
                       >
                         {category}
                       </button>
@@ -122,7 +146,13 @@ export default function ProductsPage() {
                 <h4 className="font-medium mb-3 text-gray-300">Price Range</h4>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <input type="range" min="0" max="200" className="w-full accent-[#FF6B35]" defaultValue="200" />
+                    <input
+                      type="range"
+                      min="0"
+                      max="200"
+                      className="w-full accent-[#FF6B35]"
+                      defaultValue="200"
+                    />
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-400">£0</span>
@@ -162,9 +192,13 @@ export default function ProductsPage() {
                       </span>
                     </div>
                     <h3 className="text-xl font-bold mb-2">{product.name}</h3>
-                    <p className="text-gray-400 text-sm mb-4 h-20 overflow-hidden">{product.description}</p>
+                    <p className="text-gray-400 text-sm mb-4 h-20 overflow-hidden">
+                      {product.description}
+                    </p>
                     <div className="flex justify-between items-center">
-                      <span className="text-[#FF6B35] font-bold">£{product.price.toFixed(2)}</span>
+                      <span className="text-[#FF6B35] font-bold">
+                        £{product.price.toFixed(2)}
+                      </span>
                       <div className="flex space-x-2">
                         <Button
                           asChild
@@ -174,7 +208,10 @@ export default function ProductsPage() {
                         >
                           <Link href={`/products/${product.id}`}>View</Link>
                         </Button>
-                        <Button size="sm" className="bg-[#FF6B35] hover:bg-[#FF8C5A]">
+                        <Button
+                          size="sm"
+                          className="bg-[#FF6B35] hover:bg-[#FF8C5A]"
+                        >
                           <ShoppingCart className="h-4 w-4" />
                         </Button>
                       </div>
@@ -187,5 +224,5 @@ export default function ProductsPage() {
         </div>
       </div>
     </main>
-  )
+  );
 }

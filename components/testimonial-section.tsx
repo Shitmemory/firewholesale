@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Star } from "lucide-react"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Star } from "lucide-react";
+import Link from "next/link";
 
 export default function TestimonialSection() {
   const testimonials = [
@@ -26,17 +27,20 @@ export default function TestimonialSection() {
       role: "Food Truck",
       content:
         "As a mobile food business, consistency and quality are crucial. FIRE's wholesale program delivers on both fronts, helping us maintain our reputation for excellence.",
-      rating: 4,
+      rating: 5,
     },
-  ]
+  ];
 
   return (
     <section className="py-16 px-4 md:px-8 lg:px-16">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Partners Say</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            What Our Partners Say
+          </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our wholesale partners have to say about working with FIRE.
+            Don't just take our word for it. Here's what our wholesale partners
+            have to say about working with FIRE.
           </p>
         </div>
 
@@ -48,7 +52,11 @@ export default function TestimonialSection() {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className={`h-5 w-5 ${i < testimonial.rating ? "text-[#FF6B35] fill-[#FF6B35]" : "text-gray-600"}`}
+                      className={`h-5 w-5 ${
+                        i < testimonial.rating
+                          ? "text-[#FF6B35] fill-[#FF6B35]"
+                          : "text-gray-600"
+                      }`}
                     />
                   ))}
                 </div>
@@ -64,10 +72,10 @@ export default function TestimonialSection() {
 
         <div className="mt-10 text-center">
           <Button className="bg-transparent hover:bg-transparent text-[#FF6B35] hover:text-[#FF8C5A] underline">
-            View All Testimonials
+            <Link href="/testimonials">View All Testimonials</Link>
           </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }
