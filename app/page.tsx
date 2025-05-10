@@ -36,7 +36,7 @@ export default function Home() {
       <TestimonialSection />
 
       {/* CTA Section */}
-      <section className="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-r from-[#1A1A1A] to-black">
+      <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#1A1A1A] to-black">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Become a Wholesale Partner?
@@ -45,7 +45,7 @@ export default function Home() {
             Join our growing network of wholesale partners and bring the
             authentic FIRE flavors to your customers.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center ">
             <Button
               asChild
               className="bg-[#FF6B35] hover:bg-[#FF8C5A] text-white px-8 py-6 text-lg rounded-md"
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* Feedback Section */}
-      <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#1A1A1A]">
+      <section className="py-16 px-4 md:px-8 lg:px-16 bg-[#1A1A1A] border-t border-gray-700">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             We Would Love to Hear From You!
